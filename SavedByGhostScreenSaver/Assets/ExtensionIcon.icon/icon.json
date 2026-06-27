@@ -1,0 +1,117 @@
+{
+  "fill" : {
+    "linear-gradient" : [
+      "display-p3:0.07279,0.10879,0.12374,1.00000",
+      "display-p3:0.11765,0.15294,0.18039,1.00000"
+    ],
+    "orientation" : {
+      "start" : {
+        "x" : 0.5,
+        "y" : 0
+      },
+      "stop" : {
+        "x" : 0.5,
+        "y" : 0.7
+      }
+    }
+  },
+  "groups" : [
+    {
+      "hidden" : false,
+      "layers" : [
+        {
+          "fill" : {
+            "solid" : "srgb:0.12549,0.62353,0.89804,1.00000"
+          },
+          "image-name" : "SavedByGhostOutline.png",
+          "name" : "SavedByGhostOutline"
+        }
+      ],
+      "name" : "Outline",
+      "position" : {
+        "scale" : 0.3,
+        "translation-in-points" : [
+          0,
+          -17
+        ]
+      },
+      "shadow" : {
+        "kind" : "layer-color",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.15
+      }
+    },
+    {
+      "blur-material" : null,
+      "hidden" : false,
+      "layers" : [
+        {
+          "fill" : {
+            "automatic-gradient" : "display-p3:0.80294,0.83587,0.84048,1.00000"
+          },
+          "image-name" : "SavedByGhostInner.png",
+          "name" : "SavedByGhostInner"
+        }
+      ],
+      "lighting" : "individual",
+      "name" : "GhostSheet",
+      "position" : {
+        "scale" : 0.3,
+        "translation-in-points" : [
+          0,
+          -17
+        ]
+      },
+      "shadow" : {
+        "kind" : "layer-color",
+        "opacity" : 0.5
+      },
+      "specular" : true,
+      "translucency" : {
+        "enabled" : false,
+        "value" : 0
+      }
+    },
+    {
+      "blur-material" : null,
+      "layers" : [
+        {
+          "image-name" : "TV 3.png",
+          "name" : "TV",
+          "position" : {
+            "scale" : 1,
+            "translation-in-points" : [
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "name" : "TV",
+      "position" : {
+        "scale" : 0.6,
+        "translation-in-points" : [
+          0,
+          30
+        ]
+      },
+      "shadow" : {
+        "kind" : "layer-color",
+        "opacity" : 0.5
+      },
+      "specular" : true,
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "squares" : [
+      "macOS"
+    ]
+  }
+}

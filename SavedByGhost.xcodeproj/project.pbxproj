@@ -1,0 +1,1061 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7A3E44FC2FED52C7009C9C0A /* SavedByGhostKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3E44F62FED52C7009C9C0A /* SavedByGhostKit.framework */; };
+		7A3E44FD2FED52C7009C9C0A /* SavedByGhostKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3E44F62FED52C7009C9C0A /* SavedByGhostKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7A3E450F2FED5B49009C9C0A /* PaperSaverKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7A3E450E2FED5B49009C9C0A /* PaperSaverKit */; };
+		7A43F9162FF0677B00FD0C8A /* GPL-3.0.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7A43F9132FF0677B00FD0C8A /* GPL-3.0.rtf */; };
+		7A6B9E2D2FEDAC4C00619236 /* SavedByGhostScreenSaver.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = 7A6B9E262FEDAC4C00619236 /* SavedByGhostScreenSaver.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7A6B9E352FEDAD1000619236 /* SavedByGhostKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3E44F62FED52C7009C9C0A /* SavedByGhostKit.framework */; };
+		7AB366CC2FEEE0EF006F8F8B /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 7AB366CB2FEEE0EF006F8F8B /* OrderedCollections */; };
+		7AC8D8522FF07EB1008B51DD /* OFL-1.1.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7AC8D84F2FF07EB1008B51DD /* OFL-1.1.rtf */; };
+		7AEA9AA52FF0699400B8507B /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 7AEA9AA42FF0699400B8507B /* PrivacyInfo.xcprivacy */; };
+		7AEA9AAA2FF06A3D00B8507B /* LICENSE.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7AEA9AA92FF06A3D00B8507B /* LICENSE.rtf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7A3E44FA2FED52C7009C9C0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A3E44BC2FED4CF6009C9C0A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A3E44F52FED52C7009C9C0A;
+			remoteInfo = SavedByGhostFramework;
+		};
+		7A6B9E2B2FEDAC4C00619236 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A3E44BC2FED4CF6009C9C0A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A6B9E252FEDAC4C00619236;
+			remoteInfo = SavedByGhostScreenSaverExtension;
+		};
+		7A6B9E372FEDAD1000619236 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A3E44BC2FED4CF6009C9C0A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A3E44F52FED52C7009C9C0A;
+			remoteInfo = SavedByGhostFramework;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7A3E45022FED52C7009C9C0A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7A3E44FD2FED52C7009C9C0A /* SavedByGhostKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A6B9E322FEDAC4C00619236 /* Embed ExtensionKit Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7A6B9E2D2FEDAC4C00619236 /* SavedByGhostScreenSaver.appex in Embed ExtensionKit Extensions */,
+			);
+			name = "Embed ExtensionKit Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7A3E44C42FED4CF6009C9C0A /* SavedByGhost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SavedByGhost.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A3E44F62FED52C7009C9C0A /* SavedByGhostKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SavedByGhostKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A43F9132FF0677B00FD0C8A /* GPL-3.0.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "GPL-3.0.rtf"; sourceTree = "<group>"; };
+		7A6B9E262FEDAC4C00619236 /* SavedByGhostScreenSaver.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.extensionkit-extension"; includeInIndex = 0; path = SavedByGhostScreenSaver.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A98177C2FEDD9F200DD6EC0 /* BuildNumber.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BuildNumber.xcconfig; sourceTree = "<group>"; };
+		7AC8D84B2FF0750A008B51DD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7AC8D84F2FF07EB1008B51DD /* OFL-1.1.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "OFL-1.1.rtf"; sourceTree = "<group>"; };
+		7AEA9AA42FF0699400B8507B /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		7AEA9AA92FF06A3D00B8507B /* LICENSE.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = LICENSE.rtf; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		7A3E44FE2FED52C7009C9C0A /* Exceptions for "SavedByGhostKit" folder in "SavedByGhostKit" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets/FrameworkIcon.png,
+				Assets/SavedByGhostFont.ttf,
+				Assets/SavedByGhostVideo.mp4,
+			);
+			publicHeaders = (
+				GhostImageData.h,
+				GhostSaverRenderer.h,
+				SavedByGhostFilesystemUtils.hpp,
+				SavedByGhostFramework.h,
+			);
+			target = 7A3E44F52FED52C7009C9C0A /* SavedByGhostKit */;
+		};
+		7A43F90E2FF04EC400FD0C8A /* Exceptions for "SavedByGhost" folder in "SavedByGhost" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets/SavedByGhostStatusbarIcon.png,
+				Info.plist,
+			);
+			target = 7A3E44C32FED4CF6009C9C0A /* SavedByGhost */;
+		};
+		7A4543922FF0AA2600AAEB3F /* Exceptions for ".codeberg" folder in "SavedByGhost" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				images/SavedByGhostConfigurationSheetScreenshot.png,
+				images/SavedByGhostScreenshot.png,
+			);
+			target = 7A3E44C32FED4CF6009C9C0A /* SavedByGhost */;
+		};
+		7A4543932FF0AA2600AAEB3F /* Exceptions for ".codeberg" folder in "SavedByGhostKit" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				images/SavedByGhostConfigurationSheetScreenshot.png,
+				images/SavedByGhostScreenshot.png,
+			);
+			target = 7A3E44F52FED52C7009C9C0A /* SavedByGhostKit */;
+		};
+		7A4543942FF0AA2600AAEB3F /* Exceptions for ".codeberg" folder in "SavedByGhostScreenSaver" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				images/SavedByGhostConfigurationSheetScreenshot.png,
+				images/SavedByGhostScreenshot.png,
+			);
+			target = 7A6B9E252FEDAC4C00619236 /* SavedByGhostScreenSaver */;
+		};
+		7A6B9E2E2FEDAC4C00619236 /* Exceptions for "SavedByGhostScreenSaver" folder in "SavedByGhostScreenSaver" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets/thumbnail.png,
+				"Assets/thumbnail@2x.png",
+				Info.plist,
+			);
+			target = 7A6B9E252FEDAC4C00619236 /* SavedByGhostScreenSaver */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		7A3E44C62FED4CF6009C9C0A /* SavedByGhost */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				7A43F90E2FF04EC400FD0C8A /* Exceptions for "SavedByGhost" folder in "SavedByGhost" target */,
+			);
+			path = SavedByGhost;
+			sourceTree = "<group>";
+		};
+		7A3E44F72FED52C7009C9C0A /* SavedByGhostKit */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				7A3E44FE2FED52C7009C9C0A /* Exceptions for "SavedByGhostKit" folder in "SavedByGhostKit" target */,
+			);
+			path = SavedByGhostKit;
+			sourceTree = "<group>";
+		};
+		7A4543862FF0A35400AAEB3F /* Legacy */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Legacy;
+			sourceTree = "<group>";
+		};
+		7A45438F2FF0AA1100AAEB3F /* .codeberg */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				7A4543922FF0AA2600AAEB3F /* Exceptions for ".codeberg" folder in "SavedByGhost" target */,
+				7A4543932FF0AA2600AAEB3F /* Exceptions for ".codeberg" folder in "SavedByGhostKit" target */,
+				7A4543942FF0AA2600AAEB3F /* Exceptions for ".codeberg" folder in "SavedByGhostScreenSaver" target */,
+			);
+			path = .codeberg;
+			sourceTree = "<group>";
+		};
+		7A6B9E272FEDAC4C00619236 /* SavedByGhostScreenSaver */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				7A6B9E2E2FEDAC4C00619236 /* Exceptions for "SavedByGhostScreenSaver" folder in "SavedByGhostScreenSaver" target */,
+			);
+			path = SavedByGhostScreenSaver;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7A3E44C12FED4CF6009C9C0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A3E450F2FED5B49009C9C0A /* PaperSaverKit in Frameworks */,
+				7A3E44FC2FED52C7009C9C0A /* SavedByGhostKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A3E44F32FED52C7009C9C0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AB366CC2FEEE0EF006F8F8B /* OrderedCollections in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A6B9E232FEDAC4C00619236 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A6B9E352FEDAD1000619236 /* SavedByGhostKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7A3E44BB2FED4CF6009C9C0A = {
+			isa = PBXGroup;
+			children = (
+				7A45438F2FF0AA1100AAEB3F /* .codeberg */,
+				7A4543862FF0A35400AAEB3F /* Legacy */,
+				7AC8D84F2FF07EB1008B51DD /* OFL-1.1.rtf */,
+				7AC8D84B2FF0750A008B51DD /* README.md */,
+				7AEA9AA92FF06A3D00B8507B /* LICENSE.rtf */,
+				7AEA9AA42FF0699400B8507B /* PrivacyInfo.xcprivacy */,
+				7A43F9132FF0677B00FD0C8A /* GPL-3.0.rtf */,
+				7A98177C2FEDD9F200DD6EC0 /* BuildNumber.xcconfig */,
+				7A3E44C62FED4CF6009C9C0A /* SavedByGhost */,
+				7A3E44F72FED52C7009C9C0A /* SavedByGhostKit */,
+				7A6B9E272FEDAC4C00619236 /* SavedByGhostScreenSaver */,
+				7A6B9E342FEDAD1000619236 /* Frameworks */,
+				7A3E44C52FED4CF6009C9C0A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7A3E44C52FED4CF6009C9C0A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A3E44C42FED4CF6009C9C0A /* SavedByGhost.app */,
+				7A3E44F62FED52C7009C9C0A /* SavedByGhostKit.framework */,
+				7A6B9E262FEDAC4C00619236 /* SavedByGhostScreenSaver.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7A6B9E342FEDAD1000619236 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7A3E44F12FED52C7009C9C0A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		7A3E44C32FED4CF6009C9C0A /* SavedByGhost */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A3E44D22FED4CF7009C9C0A /* Build configuration list for PBXNativeTarget "SavedByGhost" */;
+			buildPhases = (
+				7A3E44C02FED4CF6009C9C0A /* Sources */,
+				7A3E44C12FED4CF6009C9C0A /* Frameworks */,
+				7A3E44C22FED4CF6009C9C0A /* Resources */,
+				7A3E45022FED52C7009C9C0A /* Embed Frameworks */,
+				7A6B9E322FEDAC4C00619236 /* Embed ExtensionKit Extensions */,
+				7A91541D2FF072AE009DFA70 /* Create Framework Symbolic Link */,
+				7A0380CE2FF1430C000DDFB4 /* Create License Symbolic Links */,
+				7A0380DA2FF153BC000DDFB4 /* Create PrivacyInfo Symbolic Links */,
+				7A0380D92FF15363000DDFB4 /* Create Framework Icon */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7A3E44FB2FED52C7009C9C0A /* PBXTargetDependency */,
+				7A6B9E2C2FEDAC4C00619236 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				7A3E44C62FED4CF6009C9C0A /* SavedByGhost */,
+				7A4543862FF0A35400AAEB3F /* Legacy */,
+				7A45438F2FF0AA1100AAEB3F /* .codeberg */,
+			);
+			name = SavedByGhost;
+			packageProductDependencies = (
+				7A3E450E2FED5B49009C9C0A /* PaperSaverKit */,
+			);
+			productName = ScreenSaverTest;
+			productReference = 7A3E44C42FED4CF6009C9C0A /* SavedByGhost.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7A3E44F52FED52C7009C9C0A /* SavedByGhostKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A3E44FF2FED52C7009C9C0A /* Build configuration list for PBXNativeTarget "SavedByGhostKit" */;
+			buildPhases = (
+				7A3E44F12FED52C7009C9C0A /* Headers */,
+				7A3E44F22FED52C7009C9C0A /* Sources */,
+				7A3E44F32FED52C7009C9C0A /* Frameworks */,
+				7A3E44F42FED52C7009C9C0A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				7A3E44F72FED52C7009C9C0A /* SavedByGhostKit */,
+				7A4543862FF0A35400AAEB3F /* Legacy */,
+				7A45438F2FF0AA1100AAEB3F /* .codeberg */,
+			);
+			name = SavedByGhostKit;
+			packageProductDependencies = (
+				7AB366CB2FEEE0EF006F8F8B /* OrderedCollections */,
+			);
+			productName = SavedByGhostFramework;
+			productReference = 7A3E44F62FED52C7009C9C0A /* SavedByGhostKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7A6B9E252FEDAC4C00619236 /* SavedByGhostScreenSaver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A6B9E2F2FEDAC4C00619236 /* Build configuration list for PBXNativeTarget "SavedByGhostScreenSaver" */;
+			buildPhases = (
+				7A6B9E222FEDAC4C00619236 /* Sources */,
+				7A6B9E232FEDAC4C00619236 /* Frameworks */,
+				7A6B9E242FEDAC4C00619236 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7A6B9E382FEDAD1000619236 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				7A4543862FF0A35400AAEB3F /* Legacy */,
+				7A45438F2FF0AA1100AAEB3F /* .codeberg */,
+				7A6B9E272FEDAC4C00619236 /* SavedByGhostScreenSaver */,
+			);
+			name = SavedByGhostScreenSaver;
+			packageProductDependencies = (
+			);
+			productName = SavedByGhostScreenSaverExtension;
+			productReference = 7A6B9E262FEDAC4C00619236 /* SavedByGhostScreenSaver.appex */;
+			productType = "com.apple.product-type.extensionkit-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7A3E44BC2FED4CF6009C9C0A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2650;
+				LastUpgradeCheck = 2660;
+				TargetAttributes = {
+					7A3E44C32FED4CF6009C9C0A = {
+						CreatedOnToolsVersion = 26.5;
+					};
+					7A3E44F52FED52C7009C9C0A = {
+						CreatedOnToolsVersion = 26.5;
+					};
+					7A6B9E252FEDAC4C00619236 = {
+						CreatedOnToolsVersion = 26.5;
+					};
+				};
+			};
+			buildConfigurationList = 7A3E44BF2FED4CF6009C9C0A /* Build configuration list for PBXProject "SavedByGhost" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7A3E44BB2FED4CF6009C9C0A;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				7A3E450D2FED5B49009C9C0A /* XCRemoteSwiftPackageReference "PaperSaver" */,
+				7AB366C82FEEE0E4006F8F8B /* XCRemoteSwiftPackageReference "swift-collections" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 7A3E44C52FED4CF6009C9C0A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7A3E44C32FED4CF6009C9C0A /* SavedByGhost */,
+				7A3E44F52FED52C7009C9C0A /* SavedByGhostKit */,
+				7A6B9E252FEDAC4C00619236 /* SavedByGhostScreenSaver */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7A3E44C22FED4CF6009C9C0A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AEA9AAA2FF06A3D00B8507B /* LICENSE.rtf in Resources */,
+				7A43F9162FF0677B00FD0C8A /* GPL-3.0.rtf in Resources */,
+				7AC8D8522FF07EB1008B51DD /* OFL-1.1.rtf in Resources */,
+				7AEA9AA52FF0699400B8507B /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A3E44F42FED52C7009C9C0A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A6B9E242FEDAC4C00619236 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7A0380CE2FF1430C000DDFB4 /* Create License Symbolic Links */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Create License Symbolic Links";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\nset -euo pipefail\n\n# --- Configuration ---\nFILES=(\n  \"OFL-1.1.rtf\"\n  \"LICENSE.rtf\"\n  \"GPL-3.0.rtf\"\n)\n\n# --- Derived paths ---\nAPP_RESOURCES_DIR=\"${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Resources\"\n\nFRAMEWORK_RESOURCES_DIR=\"${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks/SavedByGhostKit.framework/Resources\"\n\nEXTENSION_RESOURCES_DIR=\"${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/PlugIns/SavedByGhostScreenSaver.appex/Contents/Resources\"\n\necho \"App Resources:       ${APP_RESOURCES_DIR}\"\necho \"Framework Resources: ${FRAMEWORK_RESOURCES_DIR}\"\necho \"Extension Resources: ${EXTENSION_RESOURCES_DIR}\"\n\n# --- Sanity check ---\nif [ ! -d \"${APP_RESOURCES_DIR}\" ]; then\n  echo \"error: App resources directory not found: ${APP_RESOURCES_DIR}\"\n  exit 1\nfi\n\n# --- Ensure destination directories exist ---\nmkdir -p \"${FRAMEWORK_RESOURCES_DIR}\"\nmkdir -p \"${EXTENSION_RESOURCES_DIR}\"\n\nfor FILE in \"${FILES[@]}\"; do\n  SOURCE_FILE=\"${APP_RESOURCES_DIR}/${FILE}\"\n\n  if [ ! -f \"${SOURCE_FILE}\" ]; then\n    echo \"error: Source file not found: ${SOURCE_FILE}\"\n    exit 1\n  fi\n\n  # -------------------------\n  # Framework symlink\n  # -------------------------\n  FRAMEWORK_LINK=\"${FRAMEWORK_RESOURCES_DIR}/${FILE}\"\n\n  rm -rf \"${FRAMEWORK_LINK}\"\n\n  # Relative path:\n  # Frameworks/SavedByGhostKit.framework/Versions/A/Resources\n  # -> Contents/Resources\n  FRAMEWORK_REL=\"../../../../../Resources/${FILE}\"\n\n  ln -s \"${FRAMEWORK_REL}\" \"${FRAMEWORK_LINK}\"\n\n  echo \"Created framework symlink:\"\n  echo \"  ${FRAMEWORK_LINK} -> ${FRAMEWORK_REL}\"\n\n  # -------------------------\n  # Extension symlink\n  # -------------------------\n  EXTENSION_LINK=\"${EXTENSION_RESOURCES_DIR}/${FILE}\"\n\n  rm -rf \"${EXTENSION_LINK}\"\n\n  # Relative path:\n  # PlugIns/SavedByGhostScreenSaver.appex/Contents/Resources\n  # -> Contents/Resources\n  EXTENSION_REL=\"../../../../Resources/${FILE}\"\n\n  ln -s \"${EXTENSION_REL}\" \"${EXTENSION_LINK}\"\n\n  echo \"Created extension symlink:\"\n  echo \"  ${EXTENSION_LINK} -> ${EXTENSION_REL}\"\ndone\n\necho \"Done.\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A0380D92FF15363000DDFB4 /* Create Framework Icon */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Create Framework Icon";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# --------------------------------------------------------------------------\n# CONFIGURE THESE TWO PATHS\n# --------------------------------------------------------------------------\nTARGET_FOLDER=\"${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks/SavedByGhostKit.framework\"\nICON_IMAGE=\"${SRCROOT}/SavedByGhostKit/Assets/FrameworkIcon.png\"\n# --------------------------------------------------------------------------\n\nset -u\n\nfail() {\n  echo \"error: $1\" >&2\n  exit \"${2:-1}\"\n}\n\n# --- 1. Validate inputs ---------------------------------------------------\n\n[[ -d \"$TARGET_FOLDER\" ]] || fail \"Target folder does not exist: $TARGET_FOLDER\" 2\n[[ -f \"$ICON_IMAGE\" ]] || fail \"Icon image file does not exist: $ICON_IMAGE\" 2\n\n# --- 2. Apply the icon via Cocoa (NSWorkspace), driven by AppleScript -------\n#\n# `sips -i` / `--addicon` no longer exists, so we go through Cocoa's\n# NSWorkspace.setIcon(_:forFile:options:), which also generates a full\n# icon set (up to 512x512) rather than a single low-res icon.\n#\n# Note: setIcon: reports success even for invalid images, so we verify\n# the result ourselves afterwards rather than trusting its return value.\n\nosascript <<EOF >/dev/null\nuse framework \"Cocoa\"\nset sourcePath to \"$ICON_IMAGE\"\nset destPath to \"$TARGET_FOLDER\"\nset imageData to (current application's NSImage's alloc()'s initWithContentsOfFile:sourcePath)\nif imageData is missing value then\n  error \"Could not load image data from \" & sourcePath\nend if\n(current application's NSWorkspace's sharedWorkspace()'s setIcon:imageData forFile:destPath options:2)\nEOF\n\nosascript_status=$?\n[[ $osascript_status -eq 0 ]] || fail \"osascript failed while setting the icon (exit $osascript_status). Check that '$ICON_IMAGE' is a valid, supported image (jpeg, tiff, png, gif, jp2, pict, bmp, qtif, psd, sgi, tga).\" 1\n\necho \"Custom icon successfully applied to: $TARGET_FOLDER\"\nexit 0\n\n";
+			showEnvVarsInLog = 0;
+		};
+		7A0380DA2FF153BC000DDFB4 /* Create PrivacyInfo Symbolic Links */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Create PrivacyInfo Symbolic Links";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\nset -euo pipefail\n\n# --- Configuration ---\nFILES=(\n  \"PrivacyInfo.xcprivacy\"\n)\n\n# --- Derived paths ---\nAPP_RESOURCES_DIR=\"${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Resources\"\n\nFRAMEWORK_RESOURCES_DIR=\"${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks/SavedByGhostKit.framework/Resources\"\n\nEXTENSION_RESOURCES_DIR=\"${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/PlugIns/SavedByGhostScreenSaver.appex/Contents/Resources\"\n\necho \"App Resources:       ${APP_RESOURCES_DIR}\"\necho \"Framework Resources: ${FRAMEWORK_RESOURCES_DIR}\"\necho \"Extension Resources: ${EXTENSION_RESOURCES_DIR}\"\n\n# --- Sanity check ---\nif [ ! -d \"${APP_RESOURCES_DIR}\" ]; then\n  echo \"error: App resources directory not found: ${APP_RESOURCES_DIR}\"\n  exit 1\nfi\n\n# --- Ensure destination directories exist ---\nmkdir -p \"${FRAMEWORK_RESOURCES_DIR}\"\nmkdir -p \"${EXTENSION_RESOURCES_DIR}\"\n\nfor FILE in \"${FILES[@]}\"; do\n  SOURCE_FILE=\"${APP_RESOURCES_DIR}/${FILE}\"\n\n  if [ ! -f \"${SOURCE_FILE}\" ]; then\n    echo \"error: Source file not found: ${SOURCE_FILE}\"\n    exit 1\n  fi\n\n  # -------------------------\n  # Framework symlink\n  # -------------------------\n  FRAMEWORK_LINK=\"${FRAMEWORK_RESOURCES_DIR}/${FILE}\"\n\n  rm -rf \"${FRAMEWORK_LINK}\"\n\n  # Relative path:\n  # Frameworks/SavedByGhostKit.framework/Versions/A/Resources\n  # -> Contents/Resources\n  FRAMEWORK_REL=\"../../../../../Resources/${FILE}\"\n\n  ln -s \"${FRAMEWORK_REL}\" \"${FRAMEWORK_LINK}\"\n\n  echo \"Created framework symlink:\"\n  echo \"  ${FRAMEWORK_LINK} -> ${FRAMEWORK_REL}\"\n\n  # -------------------------\n  # Extension symlink\n  # -------------------------\n  EXTENSION_LINK=\"${EXTENSION_RESOURCES_DIR}/${FILE}\"\n\n  rm -rf \"${EXTENSION_LINK}\"\n\n  # Relative path:\n  # PlugIns/SavedByGhostScreenSaver.appex/Contents/Resources\n  # -> Contents/Resources\n  EXTENSION_REL=\"../../../../Resources/${FILE}\"\n\n  ln -s \"${EXTENSION_REL}\" \"${EXTENSION_LINK}\"\n\n  echo \"Created extension symlink:\"\n  echo \"  ${EXTENSION_LINK} -> ${EXTENSION_REL}\"\ndone\n\necho \"Done.\"\n\n";
+			showEnvVarsInLog = 0;
+		};
+		7A91541D2FF072AE009DFA70 /* Create Framework Symbolic Link */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Create Framework Symbolic Link";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\nset -euo pipefail\n\n# --- Configuration ---\nFRAMEWORK_NAME=\"SavedByGhostKit.framework\"\nEXTENSION_NAME=\"SavedByGhostScreenSaver.appex\"\n\n# --- Derived paths ---\nAPP_FRAMEWORKS_DIR=\"${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks\"\nEXTENSION_FRAMEWORKS_DIR=\"${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/PlugIns/${EXTENSION_NAME}/Contents/Frameworks\"\n\nSOURCE_FRAMEWORK=\"${APP_FRAMEWORKS_DIR}/${FRAMEWORK_NAME}\"\nSYMLINK_PATH=\"${EXTENSION_FRAMEWORKS_DIR}/${FRAMEWORK_NAME}\"\n\necho \"Source framework: ${SOURCE_FRAMEWORK}\"\necho \"Symlink target:   ${SYMLINK_PATH}\"\n\n# --- Sanity checks ---\nif [ ! -d \"${SOURCE_FRAMEWORK}\" ]; then\n  echo \"error: Source framework not found at ${SOURCE_FRAMEWORK}\"\n  exit 1\nfi\n\n# --- Ensure destination directory exists ---\nmkdir -p \"${EXTENSION_FRAMEWORKS_DIR}\"\n\n# --- Remove any existing file/symlink/directory at destination ---\nif [ -e \"${SYMLINK_PATH}\" ] || [ -L \"${SYMLINK_PATH}\" ]; then\n  rm -rf \"${SYMLINK_PATH}\"\nfi\n\n# --- Create a relative symlink ---\n# Relative path from .../PlugIns/Y.appex/Contents/Frameworks/\n# back up to .../Contents/Frameworks/\nRELATIVE_SOURCE=\"../../../../Frameworks/${FRAMEWORK_NAME}\"\n\nln -s \"${RELATIVE_SOURCE}\" \"${SYMLINK_PATH}\"\n\necho \"Created symlink: ${SYMLINK_PATH} -> ${RELATIVE_SOURCE}\"\n\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7A3E44C02FED4CF6009C9C0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A3E44F22FED52C7009C9C0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A6B9E222FEDAC4C00619236 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7A3E44FB2FED52C7009C9C0A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7A3E44F52FED52C7009C9C0A /* SavedByGhostKit */;
+			targetProxy = 7A3E44FA2FED52C7009C9C0A /* PBXContainerItemProxy */;
+		};
+		7A6B9E2C2FEDAC4C00619236 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7A6B9E252FEDAC4C00619236 /* SavedByGhostScreenSaver */;
+			targetProxy = 7A6B9E2B2FEDAC4C00619236 /* PBXContainerItemProxy */;
+		};
+		7A6B9E382FEDAD1000619236 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7A3E44F52FED52C7009C9C0A /* SavedByGhostKit */;
+			targetProxy = 7A6B9E372FEDAD1000619236 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7A3E44D02FED4CF7009C9C0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A98177C2FEDD9F200DD6EC0 /* BuildNumber.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 7FWM5LYB4M;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7A3E44D12FED4CF7009C9C0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A98177C2FEDD9F200DD6EC0 /* BuildNumber.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 7FWM5LYB4M;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Osize";
+			};
+			name = Release;
+		};
+		7A3E44D32FED4CF7009C9C0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_ASSET_SYMBOL_FRAMEWORKS = SwiftUI;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_OPTIMIZATION = space;
+				ASSETCATALOG_COMPILER_STANDALONE_ICON_BEHAVIOR = none;
+				CODE_SIGN_ENTITLEMENTS = SavedByGhost/SavedByGhost.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 7FWM5LYB4M;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				ENABLE_USER_SELECTED_FILES = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SavedByGhost/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SavedByGhost;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© Philipp Remy 2026 - Present. Licensed under GPL-3.0.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LLVM_LTO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = de.philippremy.SavedByGhost;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_BRIDGING_HEADER_IS_INTERNAL = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_INTEROP_MODE = objcxx;
+				SWIFT_STRICT_MEMORY_SAFETY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+				VALIDATE_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		7A3E44D42FED4CF7009C9C0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_ASSET_SYMBOL_FRAMEWORKS = SwiftUI;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_OPTIMIZATION = space;
+				ASSETCATALOG_COMPILER_STANDALONE_ICON_BEHAVIOR = none;
+				CODE_SIGN_ENTITLEMENTS = SavedByGhost/SavedByGhost.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 7FWM5LYB4M;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				ENABLE_USER_SELECTED_FILES = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SavedByGhost/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SavedByGhost;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© Philipp Remy 2026 - Present. Licensed under GPL-3.0.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LLVM_LTO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = de.philippremy.SavedByGhost;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_BRIDGING_HEADER_IS_INTERNAL = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_INTEROP_MODE = objcxx;
+				SWIFT_STRICT_MEMORY_SAFETY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7A3E45002FED52C7009C9C0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_ASSET_SYMBOL_FRAMEWORKS = SwiftUI;
+				ASSETCATALOG_COMPILER_OPTIMIZATION = space;
+				ASSETCATALOG_COMPILER_STANDALONE_ICON_BEHAVIOR = none;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7FWM5LYB4M;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1.0.0;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© Philipp Remy 2026 - Present. Licensed under GPL-3.0.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LLVM_LTO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = de.philippremy.SavedByGhost.Framework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				STRIP_STYLE = "non-global";
+				SWIFT_BRIDGING_HEADER_IS_INTERNAL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SavedByGhostKit/SavedByGhostKit-BridgingHeader.h";
+				SWIFT_OBJC_INTEROP_MODE = objcxx;
+				SWIFT_STRICT_MEMORY_SAFETY = YES;
+				SWIFT_VERSION = 6.0;
+				VALIDATE_PRODUCT = NO;
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7A3E45012FED52C7009C9C0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_ASSET_SYMBOL_FRAMEWORKS = SwiftUI;
+				ASSETCATALOG_COMPILER_OPTIMIZATION = space;
+				ASSETCATALOG_COMPILER_STANDALONE_ICON_BEHAVIOR = none;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7FWM5LYB4M;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1.0.0;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© Philipp Remy 2026 - Present. Licensed under GPL-3.0.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LLVM_LTO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = de.philippremy.SavedByGhost.Framework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				STRIP_STYLE = "non-global";
+				SWIFT_BRIDGING_HEADER_IS_INTERNAL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SavedByGhostKit/SavedByGhostKit-BridgingHeader.h";
+				SWIFT_OBJC_INTEROP_MODE = objcxx;
+				SWIFT_STRICT_MEMORY_SAFETY = YES;
+				SWIFT_VERSION = 6.0;
+				VALIDATE_PRODUCT = YES;
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7A6B9E302FEDAC4C00619236 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = ExtensionIcon;
+				ASSETCATALOG_COMPILER_GENERATE_ASSET_SYMBOL_FRAMEWORKS = SwiftUI;
+				ASSETCATALOG_COMPILER_OPTIMIZATION = space;
+				ASSETCATALOG_COMPILER_STANDALONE_ICON_BEHAVIOR = none;
+				AUTOMATION_APPLE_EVENTS = NO;
+				CODE_SIGN_ENTITLEMENTS = SavedByGhostScreenSaver/SavedByGhostScreenSaver.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 7FWM5LYB4M;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PHOTO_LIBRARY = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SavedByGhostScreenSaver/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SavedByGhost;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© Philipp Remy 2026 - Present. Licensed under GPL-3.0.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				LLVM_LTO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = de.philippremy.SavedByGhost.ScreenSaver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				RUNTIME_EXCEPTION_ALLOW_DYLD_ENVIRONMENT_VARIABLES = NO;
+				RUNTIME_EXCEPTION_ALLOW_JIT = NO;
+				RUNTIME_EXCEPTION_ALLOW_UNSIGNED_EXECUTABLE_MEMORY = NO;
+				RUNTIME_EXCEPTION_DEBUGGING_TOOL = NO;
+				RUNTIME_EXCEPTION_DISABLE_EXECUTABLE_PAGE_PROTECTION = NO;
+				RUNTIME_EXCEPTION_DISABLE_LIBRARY_VALIDATION = NO;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				STRIP_STYLE = all;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_BRIDGING_HEADER_IS_INTERNAL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SavedByGhostScreenSaver/SavedByGhostScreenSaver-BridgingHeader.h";
+				SWIFT_OBJC_INTEROP_MODE = objcxx;
+				SWIFT_STRICT_MEMORY_SAFETY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+				VALIDATE_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		7A6B9E312FEDAC4C00619236 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = ExtensionIcon;
+				ASSETCATALOG_COMPILER_GENERATE_ASSET_SYMBOL_FRAMEWORKS = SwiftUI;
+				ASSETCATALOG_COMPILER_OPTIMIZATION = space;
+				ASSETCATALOG_COMPILER_STANDALONE_ICON_BEHAVIOR = none;
+				AUTOMATION_APPLE_EVENTS = NO;
+				CODE_SIGN_ENTITLEMENTS = SavedByGhostScreenSaver/SavedByGhostScreenSaver.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 7FWM5LYB4M;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PHOTO_LIBRARY = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SavedByGhostScreenSaver/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SavedByGhost;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© Philipp Remy 2026 - Present. Licensed under GPL-3.0.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				LLVM_LTO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = de.philippremy.SavedByGhost.ScreenSaver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				RUNTIME_EXCEPTION_ALLOW_DYLD_ENVIRONMENT_VARIABLES = NO;
+				RUNTIME_EXCEPTION_ALLOW_JIT = NO;
+				RUNTIME_EXCEPTION_ALLOW_UNSIGNED_EXECUTABLE_MEMORY = NO;
+				RUNTIME_EXCEPTION_DEBUGGING_TOOL = NO;
+				RUNTIME_EXCEPTION_DISABLE_EXECUTABLE_PAGE_PROTECTION = NO;
+				RUNTIME_EXCEPTION_DISABLE_LIBRARY_VALIDATION = NO;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				STRIP_STYLE = all;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_BRIDGING_HEADER_IS_INTERNAL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SavedByGhostScreenSaver/SavedByGhostScreenSaver-BridgingHeader.h";
+				SWIFT_OBJC_INTEROP_MODE = objcxx;
+				SWIFT_STRICT_MEMORY_SAFETY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7A3E44BF2FED4CF6009C9C0A /* Build configuration list for PBXProject "SavedByGhost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A3E44D02FED4CF7009C9C0A /* Debug */,
+				7A3E44D12FED4CF7009C9C0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A3E44D22FED4CF7009C9C0A /* Build configuration list for PBXNativeTarget "SavedByGhost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A3E44D32FED4CF7009C9C0A /* Debug */,
+				7A3E44D42FED4CF7009C9C0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A3E44FF2FED52C7009C9C0A /* Build configuration list for PBXNativeTarget "SavedByGhostKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A3E45002FED52C7009C9C0A /* Debug */,
+				7A3E45012FED52C7009C9C0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A6B9E2F2FEDAC4C00619236 /* Build configuration list for PBXNativeTarget "SavedByGhostScreenSaver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A6B9E302FEDAC4C00619236 /* Debug */,
+				7A6B9E312FEDAC4C00619236 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7A3E450D2FED5B49009C9C0A /* XCRemoteSwiftPackageReference "PaperSaver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AerialScreensaver/PaperSaver.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.1;
+			};
+		};
+		7AB366C82FEEE0E4006F8F8B /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7A3E450E2FED5B49009C9C0A /* PaperSaverKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A3E450D2FED5B49009C9C0A /* XCRemoteSwiftPackageReference "PaperSaver" */;
+			productName = PaperSaverKit;
+		};
+		7AB366CB2FEEE0EF006F8F8B /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7AB366C82FEEE0E4006F8F8B /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 7A3E44BC2FED4CF6009C9C0A /* Project object */;
+}

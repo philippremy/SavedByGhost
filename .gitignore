@@ -1,0 +1,9 @@
+# User settings
+**/xcuserdata/
+SavedByGhost.xcodeproj/xcuserdata
+
+# Apple Indexing Databases
+**/.DS_Store
+
+# Privacy Reports
+PrivacyReports/

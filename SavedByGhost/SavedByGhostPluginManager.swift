@@ -1,0 +1,224 @@
+//
+//  PluginManager.swift
+//  AppexSaverMinimal
+//
+//  Copyright © 2026 Guillaume Louel. Licensed under the MIT License.
+//  Copyright (c) 2026 Philipp Remy. Licensed under the MIT License.
+//
+//  Drives extension registration (via pluginkit) and screensaver activation
+//  (via PaperSaverKit) from the host app's UI.
+//
+
+import PaperSaverKit
+
+import Combine
+import Foundation
+
+@MainActor
+class SavedByGhostPluginManager: ObservableObject {
+    @Published var isInstalled: Bool = false
+    @Published var installedVersion: String?
+    @Published var installedPath: String?
+    @Published var isLoading: Bool = false
+    @Published var lastError: String?
+
+    @Published var isActiveScreensaver: Bool = false
+    @Published var isCheckingScreensaver: Bool = false
+    @Published var screensaverError: String?
+
+    private let bundleIdentifier = "de.philippremy.SavedByGhost.ScreenSaver"
+    nonisolated(unsafe) private let paperSaver = PaperSaver()
+    private let screensaverDisplayName = "SavedByGhostScreenSaver"
+
+    /// Path to the embedded extension in the app bundle.
+    var embeddedExtensionPath: String? {
+        Bundle.main.builtInPlugInsURL?.appendingPathComponent("SavedByGhostScreenSaver.appex").path
+    }
+
+    /// Version of the embedded extension.
+    var embeddedVersion: String? {
+        guard let path = embeddedExtensionPath,
+              let bundle = Bundle(path: path),
+              let version = bundle.infoDictionary?["CFBundleShortVersionString"] as? String else {
+            return nil
+        }
+        return version
+    }
+
+    init() {
+        checkInstallationStatus()
+        checkScreensaverStatus()
+    }
+
+    /// Check if the extension is registered with pluginkit.
+    func checkInstallationStatus() {
+        isLoading = true
+        lastError = nil
+
+        Task {
+            do {
+                let (isRegistered, path, version) = try await queryPluginKit()
+                await MainActor.run {
+                    self.isInstalled = isRegistered
+                    self.installedPath = path
+                    self.installedVersion = version
+                    self.isLoading = false
+                }
+            } catch {
+                await MainActor.run {
+                    self.isInstalled = false
+                    self.installedPath = nil
+                    self.installedVersion = nil
+                    self.isLoading = false
+                    self.lastError = error.localizedDescription
+                }
+            }
+        }
+    }
+
+    /// Query pluginkit for our extension's registration status.
+    private func queryPluginKit() async throws -> (Bool, String?, String?) {
+        let output = try runProcess("/usr/bin/pluginkit", arguments: ["-m", "-v", "-p", "com.apple.screensaver"])
+
+        let lines = output.components(separatedBy: "\n")
+        for line in lines {
+            if line.contains(bundleIdentifier) {
+
+                var version: String?
+                if let versionStart = line.firstIndex(of: "("),
+                   let versionEnd = line.firstIndex(of: ")") {
+                    let start = line.index(after: versionStart)
+                    version = String(line[start..<versionEnd])
+                }
+
+                var path: String?
+                if let pathStart = line.range(of: "/", options: [], range: line.startIndex..<line.endIndex) {
+                    path = String(line[pathStart.lowerBound...])
+                }
+
+                return (true, path, version)
+            }
+        }
+
+        return (false, nil, nil)
+    }
+
+    /// Install the embedded extension by handing it to pluginkit.
+    func install() throws {
+        guard let extensionPath = embeddedExtensionPath else {
+            throw PluginError.embeddedExtensionNotFound
+        }
+
+        guard FileManager.default.fileExists(atPath: extensionPath) else {
+            throw PluginError.embeddedExtensionNotFound
+        }
+
+        isLoading = true
+        lastError = nil
+
+        do {
+            _ = try runProcess("/usr/bin/pluginkit", arguments: ["-a", extensionPath])
+
+            checkInstallationStatus()
+            checkScreensaverStatus()
+        } catch {
+            isLoading = false
+            lastError = error.localizedDescription
+            throw error
+        }
+    }
+
+    /// Uninstall the extension.
+    func uninstall() throws {
+        let extensionPath: String
+        if let installed = installedPath, !installed.isEmpty {
+            extensionPath = installed
+        } else if let embedded = embeddedExtensionPath {
+            extensionPath = embedded
+        } else {
+            throw PluginError.extensionPathNotFound
+        }
+
+        isLoading = true
+        lastError = nil
+
+        do {
+            _ = try runProcess("/usr/bin/pluginkit", arguments: ["-r", extensionPath])
+
+            checkInstallationStatus()
+        } catch {
+            isLoading = false
+            lastError = error.localizedDescription
+            throw error
+        }
+    }
+
+    /// Check if our screensaver is the active screensaver on any display.
+    func checkScreensaverStatus() {
+        isCheckingScreensaver = true
+        screensaverError = nil
+
+        let activeScreensavers = unsafe paperSaver.getActiveScreensavers()
+        isActiveScreensaver = activeScreensavers.contains(screensaverDisplayName)
+        isCheckingScreensaver = false
+    }
+
+    /// Enable our screensaver as the active screensaver on every display
+    func enableAsScreensaver() async {
+        isCheckingScreensaver = true
+        screensaverError = nil
+
+        do {
+            print(screensaverDisplayName)
+            try unsafe await paperSaver.setScreensaverEverywhere(module: screensaverDisplayName)
+            checkScreensaverStatus()
+        } catch {
+            screensaverError = error.localizedDescription
+            isCheckingScreensaver = false
+        }
+    }
+
+    /// Run a subprocess and return its combined stdout/stderr.
+    private func runProcess(_ path: String, arguments: [String]) throws -> String {
+        let process = Process()
+        process.executableURL = URL(fileURLWithPath: path)
+        process.arguments = arguments
+
+        let pipe = Pipe()
+        process.standardOutput = pipe
+        process.standardError = pipe
+
+        try process.run()
+        process.waitUntilExit()
+
+        let data = pipe.fileHandleForReading.readDataToEndOfFile()
+        let output = String(data: data, encoding: .utf8) ?? ""
+
+
+        if process.terminationStatus != 0 {
+            // pluginkit returns non-zero when no matches are found, so don't treat it as fatal.
+        }
+
+        return output
+    }
+}
+
+enum PluginError: LocalizedError {
+    case embeddedExtensionNotFound
+    case extensionPathNotFound
+    case installationFailed(String)
+    case uninstallationFailed(String)
+
+    var errorDescription: String? {
+        switch self {
+        case .embeddedExtensionNotFound:
+            return "Embedded extension not found in app bundle"
+        case .extensionPathNotFound:
+            return "Extension path not found"
+        case .installationFailed(let message):
+            return "Installation failed: \(message)"
+        case .uninstallationFailed(let message):
+            return "Uninstallation failed: \(message)"
+        }
+    }
+}
