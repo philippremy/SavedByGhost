@@ -61,7 +61,7 @@ So while it is not exactly *much* data, it still is data. But the App itself is 
 
 ### Will it drain my battery?
 
-Not really. Playing the ASCII version of the Screen Saver uses around 6-9% of one efficiency core of the CPU. The ASCII version comes in slightly higher at around 15-18%. But that is well in the range for what it is doing behind the scenes (nothing is free of course) and it sits nicely between other screen savers (Apple's own screen savers can have much higher CPU demands at times).
+Not really. Playing the video-only version of the Screen Saver uses around 6-9% of one efficiency core of the CPU. The ASCII version comes in slightly higher at around 15-18%. But that is well in the range for what it is doing behind the scenes (nothing is free of course) and it sits nicely between other screen savers (Apple's own screen savers can have much higher CPU demands at times).
 
 ### I notice some delay at startup
 
@@ -77,7 +77,7 @@ Because I just whipped something together (technically in C) just to get somethi
 
 ### Why on Codeberg?
 
-Because GitHub won't give me any money for training their AI models.
+Because GitHub won't give me any money for training their AI models (if you need GitHub support, the project is mirrored to https://github.com/philippremy/SavedByGhost. Contributions of any kind need to be done through Codeberg though!).
 
 ### But you clearly used AI?
 
