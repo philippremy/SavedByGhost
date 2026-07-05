@@ -108,6 +108,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				images/SavedByGhostConfigurationSheetScreenshot.png,
+				images/SavedByGhostIcon.png,
 				images/SavedByGhostScreenshot.png,
 			);
 			target = 7A3E44C32FED4CF6009C9C0A /* SavedByGhost */;
@@ -116,6 +117,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				images/SavedByGhostConfigurationSheetScreenshot.png,
+				images/SavedByGhostIcon.png,
 				images/SavedByGhostScreenshot.png,
 			);
 			target = 7A3E44F52FED52C7009C9C0A /* SavedByGhostKit */;
@@ -124,6 +126,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				images/SavedByGhostConfigurationSheetScreenshot.png,
+				images/SavedByGhostIcon.png,
 				images/SavedByGhostScreenshot.png,
 			);
 			target = 7A6B9E252FEDAC4C00619236 /* SavedByGhostScreenSaver */;
