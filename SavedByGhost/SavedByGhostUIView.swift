@@ -34,7 +34,7 @@ struct SavedByGhostUIView: View {
     @State private var uiNeedsStateNotificationObserver: NSObjectProtocol!
     
     @State private var closeButtonHovered: Bool = false
-    @State private var closeButtonBaseColor: Color = Color(red: 0.927, green: 0.406, blue: 0.395)
+    @State private var closeButtonBaseColor: Color = Color(red: 255.0 / 255.0, green: 92.0 / 255.0, blue: 96.0 / 255.0)
     
     private var videoView: SavedByGhostVideoView!
     
@@ -55,7 +55,7 @@ struct SavedByGhostUIView: View {
                     Text("")
                 }
                 .buttonStyle(.accessoryBar)
-                .frame(width: 16, height: 16)
+                .frame(width: 14, height: 14)
                 .background(self.closeButtonBaseColor)
                 .cornerRadius(.infinity)
                 .padding()
@@ -125,33 +125,18 @@ struct SavedByGhostUIView: View {
                             .padding([.top, .bottom], 10)
                             .foregroundStyle(Color(SavedByGhostColorManager.backgroundColorFor(name: self.currentConfig.currentBackgroundColor)!.adaptiveTextColor()))
                         
-                        if #available(macOS 26, *) {
-                            Button(action: {
-                                if self.pluginManager.isInstalled {
-                                    try? self.pluginManager.uninstall()
-                                } else {
-                                    try? self.pluginManager.install()
-                                }
-                            }, label: {
-                                Text(self.pluginManager.isInstalled ? "Uninstall" : "Install")
-                            })
-                            .disabled(self.setAsGlobalInProgress)
-                            .foregroundStyle(Color(SavedByGhostColorManager.backgroundColorFor(name: self.currentConfig.currentBackgroundColor)!.adaptiveTextColor()))
-                            .buttonStyle(.glassProminent)
-                        } else {
-                            Button(action: {
-                                if self.pluginManager.isInstalled {
-                                    try? self.pluginManager.uninstall()
-                                } else {
-                                    try? self.pluginManager.install()
-                                }
-                            }, label: {
-                                Text(self.pluginManager.isInstalled ? "Uninstall" : "Install")
-                            })
-                            .disabled(self.setAsGlobalInProgress)
-                            .foregroundStyle(Color(SavedByGhostColorManager.backgroundColorFor(name: self.currentConfig.currentBackgroundColor)!.adaptiveTextColor()))
-                            .buttonStyle(.borderedProminent)
-                        }
+                        Button(action: {
+                            if self.pluginManager.isInstalled {
+                                try? self.pluginManager.uninstall()
+                            } else {
+                                try? self.pluginManager.install()
+                            }
+                        }, label: {
+                            Text(self.pluginManager.isInstalled ? "Uninstall" : "Install")
+                        })
+                        .disabled(self.setAsGlobalInProgress)
+                        .foregroundStyle(Color(SavedByGhostColorManager.backgroundColorFor(name: self.currentConfig.currentBackgroundColor)!.adaptiveTextColor()))
+                        .buttonStyle(.borderedProminent)
                         
                     }
                     
@@ -170,61 +155,31 @@ struct SavedByGhostUIView: View {
                             .foregroundStyle(Color(SavedByGhostColorManager.backgroundColorFor(name: self.currentConfig.currentBackgroundColor)!.adaptiveTextColor()))
                         
                         if self.setAsGlobalInProgress {
-                            if #available(macOS 26, *) {
-                                Button(action: {
-                                    Task {
-                                        self.setAsGlobalInProgress = true
-                                        await self.pluginManager.enableAsScreensaver()
-                                        self.setAsGlobalInProgress = false
-                                    }
-                                }, label: {
-                                    Text("Setting Screensaver...")
-                                })
-                                .disabled(self.pluginManager.isActiveScreensaver || self.setAsGlobalInProgress)
-                                .foregroundStyle(Color(SavedByGhostColorManager.backgroundColorFor(name: self.currentConfig.currentBackgroundColor)!.adaptiveTextColor()))
-                                .buttonStyle(.glass)
-                            } else {
-                                Button(action: {
-                                    Task {
-                                        self.setAsGlobalInProgress = true
-                                        await self.pluginManager.enableAsScreensaver()
-                                        self.setAsGlobalInProgress = false
-                                    }
-                                }, label: {
-                                    Text("Setting Screensaver...")
-                                })
-                                .disabled(self.pluginManager.isActiveScreensaver || self.setAsGlobalInProgress)
-                                .foregroundStyle(Color(SavedByGhostColorManager.backgroundColorFor(name: self.currentConfig.currentBackgroundColor)!.adaptiveTextColor()))
-                                .buttonStyle(.bordered)
-                            }
+                            Button(action: {
+                                Task {
+                                    self.setAsGlobalInProgress = true
+                                    await self.pluginManager.enableAsScreensaver()
+                                    self.setAsGlobalInProgress = false
+                                }
+                            }, label: {
+                                Text("Setting Screensaver...")
+                            })
+                            .disabled(self.pluginManager.isActiveScreensaver || self.setAsGlobalInProgress)
+                            .foregroundStyle(Color(SavedByGhostColorManager.backgroundColorFor(name: self.currentConfig.currentBackgroundColor)!.adaptiveTextColor()))
+                            .buttonStyle(.bordered)
                         } else {
-                            if #available(macOS 26, *) {
-                                Button(action: {
-                                    Task {
-                                        self.setAsGlobalInProgress = true
-                                        await self.pluginManager.enableAsScreensaver()
-                                        self.setAsGlobalInProgress = false
-                                    }
-                                }, label: {
-                                    Text(self.pluginManager.isActiveScreensaver ? "Already set" : "Set as default")
-                                })
-                                .disabled(self.pluginManager.isActiveScreensaver || self.setAsGlobalInProgress)
-                                .foregroundStyle(Color(SavedByGhostColorManager.backgroundColorFor(name: self.currentConfig.currentBackgroundColor)!.adaptiveTextColor()))
-                                .buttonStyle(.glass)
-                            } else {
-                                Button(action: {
-                                    Task {
-                                        self.setAsGlobalInProgress = true
-                                        await self.pluginManager.enableAsScreensaver()
-                                        self.setAsGlobalInProgress = false
-                                    }
-                                }, label: {
-                                    Text(self.pluginManager.isActiveScreensaver ? "Already set" : "Set as default")
-                                })
-                                .disabled(self.pluginManager.isActiveScreensaver || self.setAsGlobalInProgress)
-                                .foregroundStyle(Color(SavedByGhostColorManager.backgroundColorFor(name: self.currentConfig.currentBackgroundColor)!.adaptiveTextColor()))
-                                .buttonStyle(.bordered)
-                            }
+                            Button(action: {
+                                Task {
+                                    self.setAsGlobalInProgress = true
+                                    await self.pluginManager.enableAsScreensaver()
+                                    self.setAsGlobalInProgress = false
+                                }
+                            }, label: {
+                                Text(self.pluginManager.isActiveScreensaver ? "Already set" : "Set as default")
+                            })
+                            .disabled(self.pluginManager.isActiveScreensaver || self.setAsGlobalInProgress)
+                            .foregroundStyle(Color(SavedByGhostColorManager.backgroundColorFor(name: self.currentConfig.currentBackgroundColor)!.adaptiveTextColor()))
+                            .buttonStyle(.bordered)
                         }
                         
                     }
@@ -234,7 +189,7 @@ struct SavedByGhostUIView: View {
                 
                 Spacer()
                 
-                HStack(spacing: 15) {
+                VStack(spacing: 15) {
                     
                     Button("Open Screen Saver Settings", action: {
                         if let url = URL(string: "x-apple.systempreferences:com.apple.ScreenSaver-Settings.extension") {
@@ -249,6 +204,7 @@ struct SavedByGhostUIView: View {
                     .foregroundStyle(Color(SavedByGhostColorManager.backgroundColorFor(name: self.currentConfig.currentBackgroundColor)!.adaptiveTextColor()))
                     
                 }
+                .padding([.bottom, .top], 15.0)
                 
                 Spacer()
                 
@@ -265,7 +221,7 @@ struct SavedByGhostUIView: View {
             .padding([.bottom, .top], 20)
             
         }
-        .frame(minWidth: 400.0, maxWidth: .infinity, minHeight: 600.0, maxHeight: .infinity)
+        .frame(minWidth: 400.0, maxWidth: 400.0, minHeight: 600.0, maxHeight: 600.0)
         .background(Color(SavedByGhostColorManager.backgroundColorFor(name: currentConfig.currentBackgroundColor)!.color))
         .task {
             self.uiNeedsStateNotificationObserver = NotificationCenter.default.addObserver(forName: SavedByGhostUtils.SavedByGhostUINeedsStateReloadNotification, object: nil, queue: .main, using: { _ in

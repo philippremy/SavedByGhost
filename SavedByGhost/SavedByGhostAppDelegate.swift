@@ -66,7 +66,7 @@ class SavedByGhostAppDelegate: NSObject, NSApplicationDelegate {
         swiftUIBridge.view.layer?.masksToBounds = true
         
         self.savedByGhostUIWindow = NSPanel(
-            contentRect: NSRect(x: 0, y: 0, width: 300, height: 400),
+            contentRect: NSRect(x: 0, y: 0, width: 400, height: 600),
             styleMask: [.closable, .nonactivatingPanel, .utilityWindow],
             backing: .buffered,
             defer: false
