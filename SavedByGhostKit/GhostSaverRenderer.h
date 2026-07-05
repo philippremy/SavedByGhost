@@ -20,11 +20,14 @@
 #ifndef GhostSaverRenderer_h
 #define GhostSaverRenderer_h
 
+#import <SavedByGhostKit/GhostImageData.h>
+
 #import <AppKit/AppKit.h>
 #import <Foundation/NSObject.h>
 
 @interface GhostSaverRenderer : NSObject
 
+// Initializes the Renderer
 - (id)init:(NSColor*)foregroundColor;
 
 // Fetches a pregenerated NSImage for a specific frame index
@@ -32,9 +35,6 @@
 
 // Ensures that all frames are properly prerendered
 - (void)prerenderFrames:(NSRect)screenRect;
-
-@property NSArray* attributedStrings;
-@property NSMutableDictionary* prerenderedFrames;
 
 @end
 

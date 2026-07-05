@@ -26,8 +26,10 @@
 
 @implementation GhostSaverRenderer
 
-@synthesize attributedStrings;
-@synthesize prerenderedFrames;
+{
+    NSMutableAttributedString* attributedStrings[FRAME_COUNT];
+    NSMutableDictionary* prerenderedFrames;
+}
 
 - (id)init:(NSColor*)foregroundColor {
     
@@ -56,19 +58,16 @@
         NSFontAttributeName: ghostSaverFont,
     };
     
-    NSMutableArray* frameStringArray = [NSMutableArray arrayWithCapacity:FRAME_COUNT];
-    
     NSAttributedString* newlineAttrStr = [[NSAttributedString alloc] initWithString:@"\n" attributes:baseAttributes];
     
 #pragma unroll
-    for (int frameIndex = 0; frameIndex < FRAME_COUNT; ++frameIndex) {
-        frameStringArray[frameIndex] = [NSMutableAttributedString new];
-    }
+    for(int frameIndex = 0; frameIndex < FRAME_COUNT; ++frameIndex)
+        self->attributedStrings[frameIndex] = [NSMutableAttributedString new];
     
     // Pre-generate all AttributedStrings
 #pragma unroll
     for (int frameIndex = 0; frameIndex < FRAME_COUNT; ++frameIndex) {
-        NSMutableAttributedString* currAttrStr = frameStringArray[frameIndex];
+        NSMutableAttributedString* currAttrStr = self->attributedStrings[frameIndex];
         
 #pragma unroll
         for (int frameLine = 0; frameLine < FRAME_HEIGHT; ++frameLine) {
@@ -166,16 +165,12 @@
         
     }
     
-    self.attributedStrings = frameStringArray;
-    self.prerenderedFrames = [NSMutableDictionary new];
+    self->prerenderedFrames = [NSMutableDictionary new];
     
     return self;
 }
 
 - (void)prerenderFrames:(NSRect)screenRect {
-
-    if (self.attributedStrings.count == 0)
-        assert(false && "Attributed strings must have been generated before the pre-render stage");
 
     dispatch_queue_t writeQueue = dispatch_queue_create("de.philippremy.GhostSaver.WriteQueue", DISPATCH_QUEUE_SERIAL);
     dispatch_queue_t concurrentQueue = dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0);
@@ -185,7 +180,7 @@
 
     dispatch_apply(FRAME_COUNT, concurrentQueue, ^(size_t frameIndex) {
 
-        NSAttributedString* attrStr = self.attributedStrings[frameIndex];
+        NSAttributedString* attrStr = self->attributedStrings[frameIndex];
 
         CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString((CFAttributedStringRef)attrStr);
         CFRange fitRange;
@@ -233,13 +228,13 @@
         [renderImage addRepresentation:bitmap];
 
         dispatch_sync(writeQueue, ^() {
-            [self.prerenderedFrames setObject:renderImage forKey:[NSNumber numberWithInt:(int)frameIndex]];
+            [self->prerenderedFrames setObject:renderImage forKey:[NSNumber numberWithInt:(int)frameIndex]];
         });
     });
 }
 
 - (NSImage *)getPrerenderedImageFor:(int)frameIndex {
-    return [self.prerenderedFrames objectForKey:[NSNumber numberWithInt:frameIndex]];
+    return [self->prerenderedFrames objectForKey:[NSNumber numberWithInt:frameIndex]];
 }
 
 @end
